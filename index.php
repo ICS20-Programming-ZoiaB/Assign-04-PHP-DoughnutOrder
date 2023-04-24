@@ -32,7 +32,7 @@
    <h1>Doughnut Order, with PHP</h1>
 
    <!-- Image -->
-   <img src="./images/doughnuts.jpg" alt="Doughnuts" width="400" length="400">
+   <img src="./images/sprinkle_doughnut.webp" alt="Doughnuts" width="400" length="400">
      
    <!-- Text for welcome message -->
    <br><br>
@@ -118,33 +118,33 @@
           
              <!-- First checkbox - Oreo drink -->
              <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+               <input type="checkbox" id="oreo" name="oreo" class="mdl-checkbox__input">
                <span class="mdl-checkbox__label">Oreo</span>
-               <input type="checkbox" id="oreo" name="oreo" class="mdl-checkbox__input"><br><br>
-             </label>
+             </label><br><br>
 
-             <!--Second checkbox - Mango Drink -->
+             <!-- Second checkbox - Mango Drink -->
              <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+               <input type="checkbox" id="mango" name="mango" class="mdl-checkbox__input">
                <span class="mdl-checkbox__label">Mango</span>
-               <input type="checkbox" id="mango" name="mango" class="mdl-checkbox__input"><br><br>
-             </label>
+             </label><br><br>
 
              <!-- Third checkbox - Fudge -->
              <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+               <input type="checkbox" id="fudge" name="fudge" class="mdl-checkbox__input">
                <span class="mdl-checkbox__label">Fudge</span>
-               <input type="checkbox" id="fudge" name="fudge" class="mdl-checkbox__input"><br><br>
-             </label>
+             </label><br><br>
 
-             <!-- Fourth checkbox - Raspberry -->
+             <!-- Fourth checkbox - Raspberry Drink -->
              <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+               <input type="checkbox" id="raspberry" name="raspberry" class="mdl-checkbox__input">
                <span class="mdl-checkbox__label">Raspberry</span>
-               <input type="checkbox" id="raspberry" name="raspberry" class="mdl-checkbox__input"><br><br>
-             </label>
+             </label><br><br>
 
-             <!-- MDL number input with floating label for garlic potato side -->
+             <!-- MDL number input with floating label for drink -->
              <h4>Choose number of drinks</h4>
              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                <input class="mdl-textfield__input" type="number" id="drinks" step="1" value="0" min="0" max="6" name="drinks">
-               <label class="mdl-textfield__label" for="drinks">Pick a number of drinks:</label>
+               <label class="mdl-textfield__label" for="drinks">...</label>
              </div><br>
 
              <!-- Adding id to submit button for styling -->

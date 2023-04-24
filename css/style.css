@@ -7,12 +7,12 @@
 body {
   width: 80%;
   margin: 5% 10%;
-  background-color: #F4B9B2;
+  background-color: lightpink;
   padding-left:90px
 }
 
 h1 {
-  background-color: #DAEDBD;
+  background-color: hsl(84deg 57% 84%)
 }
 
 p {
@@ -21,7 +21,7 @@ p {
 }
 
 h4 {
-  color: #7DBBC3;
+  color: rgb(125 187 195);
   font-weight: bold;
 }
 
