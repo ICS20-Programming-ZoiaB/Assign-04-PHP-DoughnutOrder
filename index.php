@@ -94,7 +94,7 @@
    </table>
    
    <!-- Form for user input -->
-   <form action="javascript:OrderSent()">
+   <form action="./results.php" method="post" target="results">
      
      <!-- Multiple choice - picking a doughnut size and drink type -->
      <?php echo "<h4>Choose size of doughnut:</h4>"; ?>
@@ -112,25 +112,25 @@
        <!-- First checkbox - Sprinkles -->
        <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
          <span class="mdl-checkbox__label">Sprinkles</span>
-         <input type="checkbox" id="sprinkles" name="sprinkles" class="mdl-checkbox__input"><br><br>
+         <input type="checkbox" id="sprinkles" name="checkboxes[]" value="1" class="mdl-checkbox__input"><br><br>
        </label>
   
        <!--Second checkbox - Chocolate Shavings -->
        <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
          <span class="mdl-checkbox__label">Chocolate shavings</span>
-         <input type="checkbox" id="chocolate-shavings" name="chocolate-shavings" class="mdl-checkbox__input"><br><br>
+         <input type="checkbox" id="chocolate-shavings" name="checkboxes[]" value="1" class="mdl-checkbox__input"><br><br>
        </label>
        
        <!-- Third checkbox - Skor bits -->
        <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
          <span class="mdl-checkbox__label">Skor bits</span>
-         <input type="checkbox" id="skor-bits" name="skor-bits" class="mdl-checkbox__input"><br><br>
+         <input type="checkbox" id="skor-bits" name="checkboxes[]" value="1" class="mdl-checkbox__input"><br><br>
        </label>
        
        <!-- Fourth checkbox - Caramel syrup -->
        <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
          <span class="mdl-checkbox__label">Caramel syrup</span>
-         <input type="checkbox" id="caramel-syrup" name="caramel-syrup" class="mdl-checkbox__input"><br><br>
+         <input type="checkbox" id="caramel-syrup" name="checkboxes[]" value="1" class="mdl-checkbox__input"><br><br>
        </label>
      
      <!-- Multiple choice - drink type -->
