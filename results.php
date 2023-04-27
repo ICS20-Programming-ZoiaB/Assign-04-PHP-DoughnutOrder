@@ -53,10 +53,9 @@ foreach ($numToppings as $topping) {
  $total = $subtotal + $tax;
 
  //displaying the totals to the screen
- echo 
-   
-   "You ordered a " . $doughnutSize "doughnut with " . $numToppings . ", as well as " $numDrinks . "of" . $drink "flavour.";
-   
-   <br>"Your subtotal is $" . number_format($subtotal, 2) . ".<br>The amount of HST added is $" . number_format($tax, 2) . ".<br>Your total is $" . number_format($total, 2) . ".";
+foreach ($numToppings as $topping) {
 
+echo "Your order is a " . $size . " doughnut. " . "For your doughnut, you chose " . $topping . " topping(s). You also decided to add " . $numDrinks . " drink(s) to your order " .
+"Your subtotal is $" . number_format($subtotal, 2) . ".<br>The amount of HST added is $" . number_format($tax, 2) . ".<br>Your total is $" . number_format($total, 2) . ".";
+}
 ?>
