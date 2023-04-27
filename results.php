@@ -27,6 +27,11 @@
    $baseDoughnutCost = 4.00;
  }
 
+//if the doughnut size is not selected
+  if ($size == "0") {
+   $baseDoughnutCost = 0.00;
+ }
+
  //determining the number of checkboxes checked
   if ($_SERVER["REQUEST_METHOD"] === "POST") {
   $numToppings = $_POST["checkboxes"];
@@ -55,7 +60,7 @@ foreach ($numToppings as $topping) {
  //displaying the totals to the screen
 foreach ($numToppings as $topping) {
 
-echo "Your order is a " . $size . " doughnut. " . "For your doughnut, you chose " . $topping . " topping(s). You also decided to add " . $numDrinks . " drink(s) to your order " .
-"Your subtotal is $" . number_format($subtotal, 2) . ".<br>The amount of HST added is $" . number_format($tax, 2) . ".<br>Your total is $" . number_format($total, 2) . ".";
+echo "Your order is a " . $size . " doughnut. " . "For your doughnut, you chose " . $topping . " topping(s). You also decided to add " . $numDrinks . " drink(s) to your order. " .
+"Your subtotal is $" . number_format($subtotal, 2) . ". The amount of HST added is $" . number_format($tax, 2) . ". Your total is $" . number_format($total, 2) . ".";
 }
 ?>
