@@ -27,11 +27,6 @@
    $baseDoughnutCost = 4.00;
  }
 
-//if the doughnut size is not selected
-  if ($size == "0") {
-   $baseDoughnutCost = 0.00;
- }
-
  //determining the number of checkboxes checked
   if ($_SERVER["REQUEST_METHOD"] === "POST") {
   $numToppings = $_POST["checkboxes"];
@@ -47,10 +42,8 @@ foreach ($numToppings as $topping) {
 
  //constant and variables for drink
  define("UNIT_PRICE_DRINKS", 3.00);
-//Turn costToppings into $topping to make it compatible to multiply with float
-foreach ($numToppings as $topping) {
- $costDrinks = $topping * UNIT_PRICE_DRINKS;
-}
+//Turn numDrinks into $topping to make it compatible to multiply with float
+ $costDrinks = $numDrinks * UNIT_PRICE_DRINKS;
 
  //calculating the subtotal, tax and total
  $subtotal = $baseDoughnutCost + $costToppings + $costDrinks;
@@ -59,8 +52,7 @@ foreach ($numToppings as $topping) {
 
  //displaying the totals to the screen
 foreach ($numToppings as $topping) {
-
-echo "Your order is a " . $size . " doughnut. " . "For your doughnut, you chose " . $topping . " topping(s). You also decided to add " . $numDrinks . " drink(s) to your order. " .
-"Your subtotal is $" . number_format($subtotal, 2) . ". The amount of HST added is $" . number_format($tax, 2) . ". Your total is $" . number_format($total, 2) . ".";
+echo "Your order is a " . $size . " doughnut. " . "For your doughnut, you chose " . $topping . " toppings. You also decided to add " . $numDrinks . " drink(s) to your order.".
+" Your subtotal is $" . number_format($subtotal, 2) . ". The amount of HST added is $" . number_format($tax, 2) . ". Your total is $" . number_format($total, 2) . ".";
 }
 ?>
