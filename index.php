@@ -98,8 +98,8 @@
      
      <!-- Multiple choice - picking a doughnut size and drink type -->
      <?php echo "<h4>Choose size of doughnut:</h4>"; ?>
-     <label for="doughnutSize">Choose a size for the doughnut</label>
-     <select id="doughnutSize" name="doughnutSize">
+     <label for="doughnut-size">Choose a size for the doughnut</label>
+     <select id="doughnut-size" name="doughnut-size">
        <option value="0">-- Size --</option>
        <option value="small">Small</option>
        <option value="medium">Medium</option>

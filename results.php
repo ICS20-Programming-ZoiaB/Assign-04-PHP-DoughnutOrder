@@ -12,7 +12,7 @@ $numToppings = 0;
 $costDrinks = 0;
 
 //declaring variables for base doughnut and drink
-$size = $_POST["doughnutSize"];
+$size = $_POST["doughnut-size"];
 $numDrinks = intval($_POST["drinks-number"]);
 $drink = $_POST["drink"];
 
