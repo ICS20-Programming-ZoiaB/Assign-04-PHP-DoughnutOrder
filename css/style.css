@@ -5,16 +5,15 @@
 */
 
 body {
-  width: 100%;
-  margin: 10%;
   background-color: lightpink;
-  padding-left:90px;
+  padding-left: 20px; padding-right: 20px;
 }
 
 h1 {
   background-color: hsl(84deg 57% 84%);
-  width: 60%;
   color: #998b7a;
+  padding: 40px;
+  text-align: center;
 }
 
 p {
