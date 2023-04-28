@@ -5,7 +5,6 @@
   
  //initializing variables
  $baseDoughnutCost = 0;
- $doughnutSize = 0;
  $costToppings = 0;
  $numToppings = 0;
  $costDrinks = 0;
@@ -56,6 +55,5 @@
  $total = $subtotal + $tax;
 
  //displaying the totals to the screen
-echo "Your order is a " . $size . " doughnut. " . "For your doughnut, you chose " . $numToppings . " topping(s). You also decided to add " . $numDrinks . " drink(s) to your order.".
-" Your subtotal is $" . number_format($subtotal, 2) . ". The amount of HST added is $" . number_format($tax, 2) . ". Your total is $" . number_format($total, 2) . ".";
+echo "Your order is a " . $size . " doughnut. " . "<br>For your doughnut, you chose " . $numToppings . " topping(s)." . "<br>You also decided to add " . $numDrinks . " drink(s) to your order." . "<br>Your subtotal is $" . number_format($subtotal, 2) . ".<br>The amount of HST added is $" . number_format($tax, 2) . ".<br> Your total is $" . number_format($total, 2) . ".";
 ?>
