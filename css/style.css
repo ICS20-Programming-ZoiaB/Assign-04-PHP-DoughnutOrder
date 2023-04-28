@@ -14,6 +14,7 @@ body {
 h1 {
   background-color: hsl(84deg 57% 84%);
   width: 60%;
+  color: #998b7a;
 }
 
 p {
@@ -28,10 +29,6 @@ h4 {
 
 th {
   font-size: 17px;
-}
-
-h1 {
-  color: #998b7a;
 }
 
 iframe {
