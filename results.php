@@ -37,19 +37,21 @@ else {
   $baseDoughnutCost = 4.00;
 }
 
-//Makes sure everything is zero if doughnut is not selected
-if ($size == "0") {
-  $numToppings = 0;
-  $costToppings = 0;
-}
-
 //determining the number of checkboxes checked
-if(!empty($_POST["checkboxes"])) {
-  $numToppings = count($_POST["checkboxes"]);
+if(!empty($_POST["checkboxes"]) && is_array($_POST["checkboxes"])) {
+   $numToppings = count($_POST["checkboxes"]);
+} else {
+   $numToppings = 0;
 }
 
 //Calculate cost of toppings
 $costToppings = $numToppings * UNIT_PRICE_TOPPINGS;
+
+//Makes sure toppings and cost of toppings are zero if doughnut is not selected
+if ($size == "0") {
+  $numToppings = 0;
+  $costToppings = 0;
+}
 
 //Set number of drinks to zero if user does not select a flavour
 if ($drink == "" || $drink == "0") {
