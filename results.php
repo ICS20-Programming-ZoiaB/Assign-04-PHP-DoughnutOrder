@@ -16,6 +16,7 @@ $size = $_POST["doughnutSize"];
 $numDrinks = intval($_POST["drinks-number"]);
 $drink = $_POST["drink"];
 
+//determining the cost of the base sandwich using compound if/then statements
 //if the doughnut size is small
 if ($size == "small") {
   $baseDoughnutCost = 2.00;
