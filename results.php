@@ -14,6 +14,7 @@ define("UNIT_PRICE_DRINKS", 3.00);
 //declaring variables for base doughnut and drink
  $size = $_POST["doughnutSize"];
  $numDrinks = intval($_POST["drinks-number"]);
+ $drink = $_POST["drink"];
 
  //if the doughnut size is small
  if ($size == "small") {
@@ -47,6 +48,11 @@ define("UNIT_PRICE_DRINKS", 3.00);
 if ($size == "0") {
     $numToppings = 0;
     $costToppings = 0;
+}
+
+//Set number of drinks to zero if user does not select a flavour
+if ($drink == "" || $drink == "0") {
+  $numDrinks = 0;
 }
 
 //Calculate cost of drinks
