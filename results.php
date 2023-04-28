@@ -1,7 +1,9 @@
 <?php
 
- //setting a constant for tax
- define("HST", 0.13);
+ //setting a constant for tax, unit price of toppings and unit price of drinks
+define("HST", 0.13);
+define("UNIT_PRICE_TOPPINGS", 0.50);
+define("UNIT_PRICE_DRINKS", 3.00);
   
  //initializing variables
  $baseDoughnutCost = 0;
@@ -38,15 +40,16 @@
    $numToppings = count($_POST["checkboxes"]);
  }
 
- //determining the cost of the toppings using a variable and a constant for the price
- define("UNIT_PRICE_TOPPINGS", 0.50);
-
-//Turn costToppings into $topping to make it compatible to multiply with float
+//Calculate cost of toppings
  $costToppings = $numToppings * UNIT_PRICE_TOPPINGS;
 
- //constant and variables for drink
- define("UNIT_PRICE_DRINKS", 3.00);
-//Turn numDrinks into $topping to make it compatible to multiply with float
+//Makes sure everything is zero if doughnut is not selected
+if ($size == "0") {
+    $numToppings = 0;
+    $costToppings = 0;
+}
+
+//Calculate cost of drinks
  $costDrinks = $numDrinks * UNIT_PRICE_DRINKS;
 
  //calculating the subtotal, tax and total
