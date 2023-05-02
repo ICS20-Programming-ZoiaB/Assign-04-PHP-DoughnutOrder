@@ -67,5 +67,11 @@ $tax = $subtotal * HST;
 $total = $subtotal + $tax;
 
 //displaying the totals to the screen
-echo "Your order is a " . $size . " doughnut. " . "<br>For your doughnut, you chose " . $numToppings . " topping(s)." . "<br>You also decided to add " . $numDrinks . " drink(s) to your order." . "<br>Your subtotal is $" . number_format($subtotal, 2) . ".<br>The amount of HST added is $" . number_format($tax, 2) . ".<br> Your total is $" . number_format($total, 2) . ".";
+if ($size == "0") {
+echo "You did not order a doughnut." . "<br>You ordered " . $numDrinks . " drink(s)." . "<br>Your subtotal is $" . number_format($subtotal, 2) . ".<br>The amount of taxes added due to HST is $" . number_format($tax, 2) . ".<br>Your total is $" . number_format($total, 2) . ".";
+}
+
+else {
+echo "You ordered a " . $size . " doughnut." . "<br>For your doughnut, you chose " . $numToppings . " topping(s). " . "<br>You also decided to add " . $numDrinks . " drink(s). Your subtotal is $" . number_format($subtotal, 2) . ".<br>The amount of taxes added due to HST is $" . number_format($tax, 2) . ".<br>Your total is $" . number_format($total, 2) . ".";
+}
 ?>
